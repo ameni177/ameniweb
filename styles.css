@@ -2,17 +2,51 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
 h1{
-  color: blue;
-  font-size: 12px;
-  background-color: yellow;
+  font-family: Arial, sans-serif;
+  color: rgb(255, 0, 13);
+  font-size: 60px;
+  background-color: rgb(224, 231, 230);
   padding:32px;
 }
-
+h2{
+  font-family: Arial, sans-serif;
+  color: rgb(255, 0, 13);
+  font-size: 40px;
+  background-color: rgb(224, 231, 230);
+  padding:32px;
+  margin-bottom:"20px";
+}
+p {
+  color: rgb(71, 86, 255);
+  font-size: 18px;
+  line-height: 1.5; /* Zeilenabstand */
+  text-align: justify; /* Textausrichtung */
+  margin: 0; /* Entfernen von Standardrändern */
+  :hover{
+    color: blue;
+ 
+}
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+@keyframes moveText {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(200px); } /* Move text 200px to the right */
+  100% { transform: translateX(0); } /* Move text back to its original position */
+}
+.moving-text {
+  animation: moveText 4s infinite; /* 4s duration, repeat infinitely */
+}
 header {
-  background-color: #4b4a4a;
+  
   color: #fff;
   padding: 10px;
   text-align: center;
@@ -22,7 +56,7 @@ header {
 }
 
 section {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
 
@@ -31,8 +65,9 @@ section {
 .box {
   background-color: #f0f0f0;
   border: 16px solid #ccc;
-  border-radius: 16px;
-  padding: 10px;
+  border-radius: auto;
+  padding: auto;
+  
 }
 
 table{
@@ -40,4 +75,12 @@ table{
   font-size: 12px;
   background-color: yellow;
   padding:32px;
+}
+.container {
+  position: absolute;
+  left: 0;
+}
+section a {
+  display: block; /* Display each <a> element as a block */
+  margin-bottom: 10px; /* Add some space between each <a> element */
 }
